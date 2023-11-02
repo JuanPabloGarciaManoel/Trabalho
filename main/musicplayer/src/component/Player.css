@@ -1,0 +1,52 @@
+@font-face {
+  font-family: CreamCake;
+  src: url(../font/Cream\ Cake.otf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(209, 41, 41, 0.301);
+}
+
+#componente {
+  display: grid;
+  grid-template-columns: 500px;
+  justify-content: center;
+  justify-items: center;
+  font-family: CreamCake;
+  font-size: 2vw;
+  margin: 10px 600px 10px 600px;
+  border: 0.1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  height: auto;
+}
+
+.capaMusica{
+  border-radius: 10%;
+  width: 500px;
+}
+
+.artista{
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.titulo{
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.botaoIniciar {
+  background: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  padding: 10;
+  margin: 10;
+}
