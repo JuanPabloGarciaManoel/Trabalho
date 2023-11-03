@@ -7,6 +7,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgba(209, 41, 41, 0.301);
+  background-image: url(../img/pexels-lopsan-2191013.jpg);
+  background-size: cover; 
+  background-repeat: no-repeat;
 }
 
 #componente {
@@ -20,6 +23,7 @@ body {
   border: 2px solid black;
   border-radius: 1vw;
   background-color: white;
+  opacity: 0.9;
   height: auto;
 }
 
@@ -48,9 +52,17 @@ body {
 }
 
 .tempo{
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: #828282;
+  font-size: smaller;
+}
 
+.timeline {
+  width: 80%;
+  background-color: pink;
 }
 
 @media (max-width: 768px) {

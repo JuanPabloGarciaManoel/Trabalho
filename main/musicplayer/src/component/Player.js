@@ -13,38 +13,34 @@ import "../component/Player.css"
 
 const Player = () => {
 
-    const [iniciar, { pausar, duracao, som }] = useSound(musica);
-
     const [tocando, setTocando] = useState(false);
 
+    const [iniciar, {pausar, duracao, som }] = useSound(musica);
+
     const [tempoAtual, setTempoAtual] = useState({
-        min: 0,
-        seg: 0,
+        min: "",
+        seg: "",
     });
 
     const [segundos, setSegundos] = useState(0);
 
-    useEffect(() => {
-        const seg = duracao / 1000;
-        const min = Math.floor(seg / 60);
-        const segundosRestantes = Math.floor(seg % 60);
-        const tempo = {
-            min: min,
-            sec: segundosRestantes
-        };
-        setTempoAtual(tempo);
-    },[duracao]);
+    const seg = (duracao / 1000);
+    const min = Math.floor(seg / 60);
+    const segundosRestantes = Math.floor(seg % 60);
+    const tempo = {
+        min: min,
+        seg: segundosRestantes
+    };
     
     useEffect(() => {
         const intervalo = setInterval(() => {
             if (som) {
-                const seg = som.seek();
-                const min = Math.floor(seg / 60);
-                const segRestantes = Math.floor(seg % 60);
-                setSegundos(seg);
+                setSegundos(som.seek([]));
+                const min = Math.floor(som.seek([]) / 60);
+                const seg = Math.floor(som.seek([]) % 60);
                 setTempoAtual({
                     min,
-                    seg:segRestantes,
+                    seg,
                 });
             }
         }, 1000);
@@ -62,7 +58,6 @@ const Player = () => {
     };
 
     return (
-        <body>
             <div id="componente">
                 <div id="cabecalho">
                     <h2 className="titulo">Teatro dos Vampiros</h2>
@@ -78,20 +73,18 @@ const Player = () => {
                 
                 <div>
                     <div className="tempo">
-                        
-                        {tempoAtual.min}:{tempoAtual.sec}
-                        
-                        <input
+                        <p>{tempoAtual.min}:{tempoAtual.sec}</p>
+                        <p>{tempo.min}:{tempo.sec}</p>
+                    </div>
+                    <input
                             type="range"
-                            min= {0}
+                            min= "0"
                             max={duracao / 1000}
-                            defaultValue={0}
+                            default="0"
                             value={segundos}
                             className="timeline"
-                            onChange={(e) => som.seek(parseFloat(e.target.value))}
-                        />
-
-                    </div>
+                            onChange={(e) => {som.seek([e.target.value]);}}
+                    />
                 </div>
 
 
@@ -128,7 +121,6 @@ const Player = () => {
 
                 </div>                
             </div>
-        </body>
     );
 };
 
