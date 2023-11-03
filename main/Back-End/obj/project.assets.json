@@ -10899,19 +10899,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\arthu\\.nuget\\packages\\": {}
+    "C:\\Users\\juanp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Vianna\\4_Semestre\\PFS\\Trabalho\\main\\Back-End\\Back-End.csproj",
+      "projectUniqueName": "C:\\Users\\juanp\\Desktop\\Nova pasta\\Trabalho\\main\\Back-End\\Back-End.csproj",
       "projectName": "Back-End",
-      "projectPath": "E:\\Vianna\\4_Semestre\\PFS\\Trabalho\\main\\Back-End\\Back-End.csproj",
-      "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-      "outputPath": "E:\\Vianna\\4_Semestre\\PFS\\Trabalho\\main\\Back-End\\obj\\",
+      "projectPath": "C:\\Users\\juanp\\Desktop\\Nova pasta\\Trabalho\\main\\Back-End\\Back-End.csproj",
+      "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\juanp\\Desktop\\Nova pasta\\Trabalho\\main\\Back-End\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11006,7 +11006,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

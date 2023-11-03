@@ -73,6 +73,29 @@ const Player = () => {
 
                     <h4 className="artista">Legião Urbana</h4>
                 </div>
+
+                
+                <div>
+                    <div className="tempo">
+                        <p>
+                            {tempoAtual.min}:{tempoAtual.sec}
+                        </p>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <input
+                        type="range"
+                        min="0"
+                        max={duracao / 1000}
+                        default="0"
+                        value={segundos}
+                        className="timeline"
+                        onChange={(e) => {som.seek([e.target.value]);}}
+                    />
+                </div>
+
+
                 <div id="botoes">
                     <button className="botaoIniciar">
                         <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
@@ -97,28 +120,7 @@ const Player = () => {
                             <BiSkipNext />
                         </IconContext.Provider>
                     </button>
-                </div>
-
-                <div>
-                    <div className="tempo">
-                        <p>
-                            {tempoAtual.min}:{tempoAtual.sec}
-                        </p>
-                        <p>
-                            
-                        </p>
-                    </div>
-                    <input
-                        type="range"
-                        min="0"
-                        max={duracao / 1000}
-                        default="0"
-                        value={segundos}
-                        className="timeline"
-                        onChange={(e) => {som.seek([e.target.value]);}}
-                    />
-                </div>
-                
+                </div>                
             </div>
         </body>
     );
