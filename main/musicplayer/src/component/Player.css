@@ -13,40 +13,57 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  justify-items: center;
+  text-align: center;
   font-family: CreamCake;
   font-size: 2vw;
-  margin: 10px 60px 10px 60px;
-  border: 0.1px solid black;
-  border-radius: 10px;
+  margin: 5%;
+  border: 2px solid black;
+  border-radius: 1vw;
   background-color: white;
   height: auto;
 }
 
-.capaMusica{
+.capaMusica {
   border-radius: 10%;
-  width: 50vh;
+  max-width: 65vh;
 }
 
-.artista{
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px;
+
+.titulo{
+  padding: 2vw;
   margin: 0;
 }
 
-.titulo{
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px;
-    margin: 0;
+.artista{
+  padding: 1vw;
+  margin: 0;
 }
 
 .botaoIniciar {
   background: none;
   border: none;
-  align-items: center;
-  justify-content: center;
-  padding: 10;
-  margin: 10;
+  display: inline-block; 
+  padding: 1vw;
+  margin: 1vw;
+}
+
+.tempo{
+  margin: 0;
+  padding: 0;
+
+}
+
+@media (max-width: 768px) {
+  #componente {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  #componente {
+    font-size: 4vw;
+  }
+  .capaMusica {
+    max-width: 80vw;
+  }
 }
