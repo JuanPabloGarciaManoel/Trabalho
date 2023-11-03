@@ -13,31 +13,47 @@ import "../component/Player.css"
 
 const Player = () => {
 
-    const [tocando, setTocando] = useState(false);
+    /*  Botão play  */
 
-    const [iniciar, {pausar, duracao, som }] = useSound(musica);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const [play, { pause, duration, sound }] = useSound(musica);
+
+    const botaoTocando = () => {
+        if (isPlaying) {
+            pause();
+            setIsPlaying(false);
+        } else {
+            play();
+            setIsPlaying(true);
+        }
+        console.log(duration);
+    };
+
+
+    /*  Barra de tempo  */
 
     const [tempoAtual, setTempoAtual] = useState({
-        min: "",
-        seg: "",
+        min: 0,
+        seg: 0,
     });
 
     const [segundos, setSegundos] = useState(0);
 
-    const seg = (duracao / 1000);
+    const seg = duration / 1000;
     const min = Math.floor(seg / 60);
     const segundosRestantes = Math.floor(seg % 60);
     const tempo = {
         min: min,
         seg: segundosRestantes
     };
-    
+
     useEffect(() => {
         const intervalo = setInterval(() => {
-            if (som) {
-                setSegundos(som.seek([]));
-                const min = Math.floor(som.seek([]) / 60);
-                const seg = Math.floor(som.seek([]) % 60);
+            if (sound) {
+                setSegundos(sound.seek([]));
+                const min = Math.floor(sound.seek([]) / 60);
+                const seg = Math.floor(sound.seek([]) % 60);
                 setTempoAtual({
                     min,
                     seg,
@@ -45,82 +61,72 @@ const Player = () => {
             }
         }, 1000);
         return () => clearInterval(intervalo);
-    }, [som]);
-    
-    const botaoTocando = () => {
-        if (tocando) {
-            pausar();
-            setTocando(false);
-        } else {
-            iniciar();
-            setTocando(true);
-        }
-    };
+    }, [sound]);
+
 
     return (
-            <div id="componente">
-                <div id="cabecalho">
-                    <h2 className="titulo">Teatro dos Vampiros</h2>
-                </div>
-                <div id="imagem-central">
-                    <img className="capaMusica" src={imagem} />
-                </div>
-                <div id="descricao">
-
-                    <h4 className="artista">Legião Urbana</h4>
-                </div>
-
-                
-                <div>
-                    <div className="tempo">
-                        <p>{tempoAtual.min}:{tempoAtual.sec}</p>
-                        <p>{tempo.min}:{tempo.sec}</p>
-                    </div>
-                    <input
-                            type="range"
-                            min= "0"
-                            max={duracao / 1000}
-                            default="0"
-                            value={segundos}
-                            className="timeline"
-                            onChange={(e) => {som.seek([e.target.value]);}}
-                    />
-                </div>
-
-
-                <div id="botoes">
-
-                    <button className="botaoIniciar">
-                        <IconContext.Provider value={{ size: "3em", color: "black" }}>
-                            <BiSkipPrevious />
-                        </IconContext.Provider>
-                    </button>
-
-                    {!tocando ?(
-                        
-                        <button className="botaoIniciar" onClick={botaoTocando}>
-                            <IconContext.Provider value={{ size: "3em", color: "black" }}>
-                                <AiFillPlayCircle />
-                            </IconContext.Provider>
-                        </button>
-
-                    ) : (
-
-                        <button className="botaoIniciar" onClick={botaoTocando}>
-                            <IconContext.Provider value={{ size: "3em", color: "black" }}>
-                                <AiFillPauseCircle />
-                            </IconContext.Provider>
-                        </button>
-                    )}
-
-                    <button className="botaoIniciar">
-                        <IconContext.Provider value={{ size: "3em", color: "black" }}>
-                            <BiSkipNext />
-                        </IconContext.Provider>
-                    </button>
-
-                </div>                
+        <div id="componente">
+            <div id="cabecalho">
+                <h2 className="titulo">Teatro dos Vampiros</h2>
             </div>
+            <div id="imagem-central">
+                <img className="capaMusica" src={imagem} />
+            </div>
+            <div id="descricao">
+
+                <h4 className="artista">Legião Urbana</h4>
+            </div>
+
+
+            <div>
+                <div className="tempo">
+                    <p>0{tempoAtual.min}:{tempoAtual.seg}</p>
+                    <p>0{tempo.min}:{tempo.seg}</p>
+                </div>
+                <input
+                    type="range"
+                    min= {0}
+                    max={(duration + 0)  / 1000}
+                    value={segundos}
+                    className="timeline"
+                    onChange={(e) => { sound.seek(e.target.value); }}
+                />
+            </div>
+
+
+            <div id="botoes">
+
+                <button className="botaoIniciar">
+                    <IconContext.Provider value={{ size: "3em", color: "black" }}>
+                        <BiSkipPrevious />
+                    </IconContext.Provider>
+                </button>
+
+                {!isPlaying ? (
+
+                    <button className="botaoIniciar" onClick={botaoTocando}>
+                        <IconContext.Provider value={{ size: "3em", color: "black" }}>
+                            <AiFillPlayCircle />
+                        </IconContext.Provider>
+                    </button>
+
+                ) : (
+
+                    <button className="botaoIniciar" onClick={botaoTocando}>
+                        <IconContext.Provider value={{ size: "3em", color: "black" }}>
+                            <AiFillPauseCircle />
+                        </IconContext.Provider>
+                    </button>
+                )}
+
+                <button className="botaoIniciar">
+                    <IconContext.Provider value={{ size: "3em", color: "black" }}>
+                        <BiSkipNext />
+                    </IconContext.Provider>
+                </button>
+
+            </div>
+        </div>
     );
 };
 
