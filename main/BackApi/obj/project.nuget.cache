@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T/Vxlxe2ElwadXs9HiZ/0bSkJ03vD+Ou8k8Q2t+ltT+N/FJfvzEnio77465ww4PtT1F5ytQ1P1g5eXTbZcKNnw==",
+  "dgSpecHash": "zKzWUF316eH2ookdoEpdUnnG3ybThE3r0Vi7wOkQZGecdyqe6jJFUezGkqCFrUOb5esBS1uGfEQtB9nlAQsfhQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\juanp\\Desktop\\Teste\\BackApi\\BackApi.csproj",
+  "projectFilePath": "C:\\Users\\juanp\\Desktop\\Nova pasta\\Trabalho\\main\\BackApi\\BackApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -10948,11 +10948,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juanp\\Desktop\\Teste\\BackApi\\BackApi.csproj",
+      "projectUniqueName": "C:\\Users\\juanp\\Desktop\\Nova pasta\\Trabalho\\main\\BackApi\\BackApi.csproj",
       "projectName": "BackApi",
-      "projectPath": "C:\\Users\\juanp\\Desktop\\Teste\\BackApi\\BackApi.csproj",
+      "projectPath": "C:\\Users\\juanp\\Desktop\\Nova pasta\\Trabalho\\main\\BackApi\\BackApi.csproj",
       "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juanp\\Desktop\\Teste\\BackApi\\obj\\",
+      "outputPath": "C:\\Users\\juanp\\Desktop\\Nova pasta\\Trabalho\\main\\BackApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
