@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Arthur\\GitHub\\Trabalho\\main\\BackApi\\BackApi.csproj": {}
+    "/workspaces/Trabalho/main/BackApi/BackApi.csproj": {}
   },
   "projects": {
-    "D:\\Arthur\\GitHub\\Trabalho\\main\\BackApi\\BackApi.csproj": {
+    "/workspaces/Trabalho/main/BackApi/BackApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Arthur\\GitHub\\Trabalho\\main\\BackApi\\BackApi.csproj",
+        "projectUniqueName": "/workspaces/Trabalho/main/BackApi/BackApi.csproj",
         "projectName": "BackApi",
-        "projectPath": "D:\\Arthur\\GitHub\\Trabalho\\main\\BackApi\\BackApi.csproj",
-        "packagesPath": "C:\\Users\\Arthur\\.nuget\\packages\\",
-        "outputPath": "D:\\Arthur\\GitHub\\Trabalho\\main\\BackApi\\obj\\",
+        "projectPath": "/workspaces/Trabalho/main/BackApi/BackApi.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/Trabalho/main/BackApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Arthur\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "/usr/local/dotnet/7.0.306/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,7 +55,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
@@ -102,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/dotnet/7.0.306/sdk/7.0.306/RuntimeIdentifierGraph.json"
         }
       }
     }
