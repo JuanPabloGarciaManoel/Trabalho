@@ -2335,11 +2335,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj",
+      "projectUniqueName": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj",
       "projectName": "AtletaBackend",
-      "projectPath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj",
+      "projectPath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj",
       "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\obj\\",
+      "outputPath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",

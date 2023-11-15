@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Crud from "../Crud";
 
-const Treinador = () => {
+const Administrador = () => {
 
     const {id, acao} = useParams();
     
@@ -26,9 +26,9 @@ const Treinador = () => {
 
     return (
         <Crud 
-            entidade = "treinador"
-            entidadeNomeAmigavel = "Treinador"
-            entidadeNomeAmigavelPlural = "Treinadores"
+            entidade = "administrador"
+            entidadeNomeAmigavel = "Administrador"
+            entidadeNomeAmigavelPlural = "Administradores"
             id = {id}
             acao = {acao}
             configCampos = {configCampos}
@@ -38,4 +38,4 @@ const Treinador = () => {
     );
 };
 
-export default Treinador;
+export default Administrador;

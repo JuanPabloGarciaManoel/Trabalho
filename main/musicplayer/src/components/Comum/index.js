@@ -2,17 +2,17 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Crud from "../Crud";
 
-const Atleta = () => {
+const Comum = () => {
 
     const {id, acao} = useParams();
     
     const configCampos = {
-        titulos: ['Nome', 'Altura'],
-        propriedades: ['nome', 'altura']
+        titulos: ['Nome'],
+        propriedades: ['nome']
     }
 
     const novoObjeto = () => {
-        return { id: '', nome: '', altura: 0, peso: 0 };
+        return { id: '', nome: ''};
     };
     
     const campos = (somenteLeitura, obj, alterarCampo) => {
@@ -21,22 +21,14 @@ const Atleta = () => {
                 <label htmlFor="nome">Nome</label>
                 <input type="text" readOnly={somenteLeitura} value={obj.nome} onChange={(e) => alterarCampo(e.target.name, e.target.value)} className="form-control" id="nome" name="nome" />
             </div>
-            <div className="form-group">
-                <label htmlFor="altura">Altura</label>
-                <input type="number" readOnly={somenteLeitura} value={obj.altura} onChange={(e) => alterarCampo(e.target.name, e.target.value)} className="form-control" id="altura" name="altura" />
-            </div>
-            <div className="form-group">
-                <label htmlFor="peso">Peso</label>
-                <input type="number" readOnly={somenteLeitura} value={obj.peso} onChange={(e) => alterarCampo(e.target.name, e.target.value)} className="form-control" id="peso" name="peso" />
-            </div>
         </>);
     }
 
     return (
         <Crud 
-            entidade = "atleta"
-            entidadeNomeAmigavel = "Atleta"
-            entidadeNomeAmigavelPlural = "Atletas"
+            entidade = "comum"
+            entidadeNomeAmigavel = "Comum"
+            entidadeNomeAmigavelPlural = "Comuns"
             id = {id}
             acao = {acao}
             configCampos = {configCampos}
@@ -51,4 +43,4 @@ const Atleta = () => {
     );
 };
 
-export default Atleta;
+export default Comum;

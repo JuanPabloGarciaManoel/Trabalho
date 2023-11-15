@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Atleta from "./components/Atleta";
-import Treinador from "./components/Treinador";
+import Comum from "./components/Comum";
+import Administrador from "./components/Administrador";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Login from './components/Login';
@@ -17,13 +17,13 @@ const Rotas = () => {
         <Route path='registrar' element={<Registrar />}>
           <Route path=':acao' element={<Registrar />} />
         </Route>
-        <Route path='atleta' element={<Atleta />}>
-          <Route path=':acao' element={<Atleta />} />
-          <Route path=':acao/:id' element={<Atleta />} />
+        <Route path='comum' element={<Comum />}>
+          <Route path=':acao' element={<Comum />} />
+          <Route path=':acao/:id' element={<Comum />} />
         </Route>
-        <Route path='treinador' element={<Treinador />}>
-          <Route path=':acao' element={<Treinador />} />
-          <Route path=':acao/:id' element={<Treinador />} />
+        <Route path='administrador' element={<Administrador />}>
+          <Route path=':acao' element={<Administrador />} />
+          <Route path=':acao/:id' element={<Administrador />} />
         </Route>
       </Route>
     </Routes>

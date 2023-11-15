@@ -43,8 +43,8 @@ const Layout = () => {
                                 Cadastros
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="/atleta">Atletas</a><p></p>
-                                <a className="dropdown-item" href="/treinador">Treinadores</a>
+                                <a className="dropdown-item" href="/comum">Comum</a><p></p>
+                                <a className="dropdown-item" href="/administrador">Administrador</a>
                                 { cadastrarAdmin }
                             </div>
                         </li>

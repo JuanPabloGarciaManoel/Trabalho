@@ -1,48 +1,27 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD:main/CrudExemploBackEnd-main/CrudExemploBackEnd-main/obj/AtletaBackend.csproj.nuget.dgspec.json
-    "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj": {}
+    "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj": {
+    "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj",
+        "projectUniqueName": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj",
         "projectName": "AtletaBackend",
-        "projectPath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj",
+        "projectPath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\AtletaBackend.csproj",
         "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\obj\\",
+        "outputPath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\CrudExemploBackEnd-main\\CrudExemploBackEnd-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
-    "/workspaces/Trabalho/main/BackApi/BackApi.csproj": {}
-  },
-  "projects": {
-    "/workspaces/Trabalho/main/BackApi/BackApi.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/workspaces/Trabalho/main/BackApi/BackApi.csproj",
-        "projectName": "BackApi",
-        "projectPath": "/workspaces/Trabalho/main/BackApi/BackApi.csproj",
-        "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/Trabalho/main/BackApi/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
->>>>>>> 36bb818d846a9efe1865177c863cf85ac46d627d:main/BackApi/obj/BackApi.csproj.nuget.dgspec.json
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-<<<<<<< HEAD:main/CrudExemploBackEnd-main/CrudExemploBackEnd-main/obj/AtletaBackend.csproj.nuget.dgspec.json
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-=======
-          "/usr/local/dotnet/7.0.306/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
->>>>>>> 36bb818d846a9efe1865177c863cf85ac46d627d:main/BackApi/obj/BackApi.csproj.nuget.dgspec.json
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -77,13 +56,6 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-<<<<<<< HEAD:main/CrudExemploBackEnd-main/CrudExemploBackEnd-main/obj/AtletaBackend.csproj.nuget.dgspec.json
-=======
-              "version": "[7.0.13, )"
-            },
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
->>>>>>> 36bb818d846a9efe1865177c863cf85ac46d627d:main/BackApi/obj/BackApi.csproj.nuget.dgspec.json
               "version": "[7.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
@@ -120,11 +92,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD:main/CrudExemploBackEnd-main/CrudExemploBackEnd-main/obj/AtletaBackend.csproj.nuget.dgspec.json
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "/usr/local/dotnet/7.0.306/sdk/7.0.306/RuntimeIdentifierGraph.json"
->>>>>>> 36bb818d846a9efe1865177c863cf85ac46d627d:main/BackApi/obj/BackApi.csproj.nuget.dgspec.json
         }
       }
     }

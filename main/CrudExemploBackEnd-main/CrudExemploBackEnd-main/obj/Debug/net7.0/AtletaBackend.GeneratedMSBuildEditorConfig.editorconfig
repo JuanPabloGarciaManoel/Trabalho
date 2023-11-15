@@ -7,21 +7,11 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-<<<<<<< HEAD:main/CrudExemploBackEnd-main/CrudExemploBackEnd-main/obj/Debug/net7.0/AtletaBackend.GeneratedMSBuildEditorConfig.editorconfig
 build_property.RootNamespace = AtletaBackend
 build_property.RootNamespace = AtletaBackend
-build_property.ProjectDir = C:\Users\juanp\Desktop\CAMILLO TRABALHO\Trabalho\main\CrudExemploBackEnd-main\CrudExemploBackEnd-main\
+build_property.ProjectDir = C:\Users\juanp\Desktop\CAMILLO TRABALHO\Trabalho\Projeto\Trabalho\main\CrudExemploBackEnd-main\CrudExemploBackEnd-main\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\juanp\Desktop\CAMILLO TRABALHO\Trabalho\main\CrudExemploBackEnd-main\CrudExemploBackEnd-main
-=======
-build_property.RootNamespace = BackApi
-build_property.RootNamespace = BackApi
-build_property.ProjectDir = /workspaces/Trabalho/main/BackApi/
-build_property.RazorLangVersion = 7.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /workspaces/Trabalho/main/BackApi
->>>>>>> 36bb818d846a9efe1865177c863cf85ac46d627d:main/BackApi/obj/Debug/net7.0/BackApi.GeneratedMSBuildEditorConfig.editorconfig
+build_property.MSBuildProjectDirectory = C:\Users\juanp\Desktop\CAMILLO TRABALHO\Trabalho\Projeto\Trabalho\main\CrudExemploBackEnd-main\CrudExemploBackEnd-main
 build_property._RazorSourceGeneratorDebug = 
