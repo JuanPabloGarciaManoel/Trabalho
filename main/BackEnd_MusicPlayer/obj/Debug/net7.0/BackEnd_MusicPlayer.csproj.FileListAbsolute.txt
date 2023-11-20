@@ -1,0 +1,7 @@
+E:\Vianna\4_Semestre\PFS\Trabalho\main\BackEnd_MusicPlayer\obj\Debug\net7.0\BackEnd_MusicPlayer.csproj.AssemblyReference.cache
+E:\Vianna\4_Semestre\PFS\Trabalho\main\BackEnd_MusicPlayer\obj\Debug\net7.0\BackEnd_MusicPlayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\Vianna\4_Semestre\PFS\Trabalho\main\BackEnd_MusicPlayer\obj\Debug\net7.0\BackEnd_MusicPlayer.AssemblyInfoInputs.cache
+E:\Vianna\4_Semestre\PFS\Trabalho\main\BackEnd_MusicPlayer\obj\Debug\net7.0\BackEnd_MusicPlayer.AssemblyInfo.cs
+E:\Vianna\4_Semestre\PFS\Trabalho\main\BackEnd_MusicPlayer\obj\Debug\net7.0\BackEnd_MusicPlayer.csproj.CoreCompileInputs.cache
+E:\Vianna\4_Semestre\PFS\Trabalho\main\BackEnd_MusicPlayer\obj\Debug\net7.0\BackEnd_MusicPlayer.MvcApplicationPartsAssemblyInfo.cs
+E:\Vianna\4_Semestre\PFS\Trabalho\main\BackEnd_MusicPlayer\obj\Debug\net7.0\BackEnd_MusicPlayer.MvcApplicationPartsAssemblyInfo.cache
