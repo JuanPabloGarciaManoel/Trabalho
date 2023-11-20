@@ -1,9 +1,13 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PlayList.Models;
 using PlayListAPI.Models;
 
 namespace PlayList.Controllers;
 
+[Authorize]
+[ApiController]
+[Route("api/[controller]")]
 public class MusicaController(ApplicationDbContext db) : ControllerBase
 {
 
@@ -27,6 +31,17 @@ public class MusicaController(ApplicationDbContext db) : ControllerBase
         return obj;
     }
 
+    [HttpGet("mestre/{id}")]
+    public ActionResult<IEnumerable<Musica>> GetIdMestre(string id)
+    {
+        var objetos = db.Musicas.Where(x => x.UsuarioId == id);
+
+        if (objetos == null)
+            return NotFound();
+
+        return objetos.ToArray();
+    }
+
     [HttpPost]
     public ActionResult<Musica> Post(Musica obj)
     {
@@ -34,6 +49,7 @@ public class MusicaController(ApplicationDbContext db) : ControllerBase
             obj.Id = Guid.NewGuid().ToString();
 
         db.Musicas.Add(obj);
+        db.SaveChanges();
 
         return CreatedAtAction(
             nameof(GetId),
@@ -48,14 +64,7 @@ public class MusicaController(ApplicationDbContext db) : ControllerBase
         if (id != obj.Id)
             return BadRequest();
 
-
-        var objOrig = db.Musicas.FirstOrDefault(x => x.Id == id);
-
-        if (objOrig == null)
-            return NotFound();
-
-        db.Entry(objOrig).CurrentValues.SetValues(obj);
-
+        db.Musicas.Update(obj);
         db.SaveChanges();
 
         return NoContent();

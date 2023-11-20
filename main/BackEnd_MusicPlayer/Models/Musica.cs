@@ -2,6 +2,7 @@ namespace PlayList.Models;
 public class Musica 
 {
     public string? Id { get; set; }
+    public string? UsuarioId { get; set; }
     public string Nome { get; set; } = null!;
     public string CaminhoDB { get; set; } = null!;
     public string? CaminhoImagem { get; set; }

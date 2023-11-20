@@ -2,6 +2,7 @@ namespace PlayList.Models;
 public class Playlist
 {
     public string? Id { get; set; }
+    public string? UsuarioId { get; set; }
     public string Nome { get; set; } = null!;
     public string? Descricao { get; set; }
     public List<Musica> Musicas { get; set; } = new();
