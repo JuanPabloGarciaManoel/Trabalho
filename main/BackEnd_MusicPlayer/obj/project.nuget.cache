@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zTK/13kPqDqU7e/gpDrA6ipxGc+xhKtVQ62R2xw86VEBGuAXQiyFKdb29IRsvFAKMaeYKJfkGmZmOu8GE48t0Q==",
+  "dgSpecHash": "LbluVlOn/Asv3MARbD1rgqYQeGk9UKiAjUXxhMXsfNin07Fa7C0SCs+Y2ByFGgN5yb/+FA0k5p7sV14OXMS6ZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj",
+  "projectFilePath": "C:\\Users\\juanp\\Desktop\\CAM\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\juanp\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\juanp\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

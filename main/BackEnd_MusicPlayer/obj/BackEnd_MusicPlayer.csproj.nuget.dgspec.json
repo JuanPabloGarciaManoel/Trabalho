@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj": {}
+    "C:\\Users\\juanp\\Desktop\\CAM\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj": {
+    "C:\\Users\\juanp\\Desktop\\CAM\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj",
+        "projectUniqueName": "C:\\Users\\juanp\\Desktop\\CAM\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj",
         "projectName": "BackEnd_MusicPlayer",
-        "projectPath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj",
+        "projectPath": "C:\\Users\\juanp\\Desktop\\CAM\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj",
         "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juanp\\Desktop\\CAMILLO TRABALHO\\Trabalho\\Projeto\\Trabalho\\main\\BackEnd_MusicPlayer\\obj\\",
+        "outputPath": "C:\\Users\\juanp\\Desktop\\CAM\\Trabalho\\main\\BackEnd_MusicPlayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",

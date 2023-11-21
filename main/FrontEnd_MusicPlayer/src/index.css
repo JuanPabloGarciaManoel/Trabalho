@@ -32,7 +32,7 @@ code {
 }
 
 .nav-item {
-  margin-right: 15px;
+  margin-right: 40vh;
 }
 
 .nav-link {
@@ -55,4 +55,19 @@ code {
 
 .login-input {
   margin-bottom: 10px;
+}
+
+#component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 12vh;
+}
+
+.login-container .nav-item {
+  display: inline-block;
+  margin-right: 15px;
 }
