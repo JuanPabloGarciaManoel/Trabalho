@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from 'universal-cookie';
 import {estaAutenticado, getToken} from '../auth';
 
-const urlBase = 'http://localhost:5016/api'
+const urlBase = 'http://localhost:5271/api'
 const cookies = new Cookies();
 
 const checarAutenticacao = (navigate, locationUrl) => {

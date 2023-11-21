@@ -12,6 +12,16 @@ public class UsuarioController(UserManager<IdentityUser> userManager,
     SignInManager<IdentityUser> signInManager,
     RoleManager<IdentityRole> roleManager, IAuthService authService) : ControllerBase
 {
+    public UsuarioController(UserManager<IdentityUser> userManager,
+        SignInManager<IdentityUser> signInManager,
+        RoleManager<IdentityRole> roleManager, IAuthService authService)
+    {
+        this.userManager = userManager;
+        this.signInManager = signInManager;
+        this.authService = authService;
+        this.roleManager = roleManager;
+    }
+
     [HttpPost("Criar")]
     public async Task<ActionResult<string>> CreateUser([FromBody] UserInfo model)
     {
@@ -53,8 +63,8 @@ public class UsuarioController(UserManager<IdentityUser> userManager,
             return BadRequest(retToken.Result);
     }
     
-    private readonly UserManager<IdentityUser> userManager = userManager;
-    private readonly RoleManager<IdentityRole> roleManager = roleManager;
-    private readonly SignInManager<IdentityUser> signInManager = signInManager;
-    private readonly IAuthService authService = authService;
+    private readonly UserManager<IdentityUser> userManager;
+    private readonly RoleManager<IdentityRole> roleManager;
+    private readonly SignInManager<IdentityUser> signInManager;
+    private readonly IAuthService authService;
 }

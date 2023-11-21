@@ -6,8 +6,10 @@ namespace PlayListAPI.Models;
 
 public class ApplicationDbContext : IdentityDbContext
 {
+    public DbSet<Comum> Comuns { get; set; }
     public DbSet<Playlist> Playlists { get; set; }
     public DbSet<Musica> Musicas { get; set; }
+    public DbSet<Administrador> Administradores { get; set; }
     public DbSet<UserInfo> UsersInfo { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)

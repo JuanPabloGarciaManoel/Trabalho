@@ -16,7 +16,8 @@ const Administrador = () => {
     };
     
     const campos = (somenteLeitura, obj, alterarCampo) => {
-        return (<>
+        return (
+        <>
             <div className="form-group">
                 <label htmlFor="nome">Nome</label>
                 <input type="text" readOnly={somenteLeitura} value={obj.nome} onChange={(e) => alterarCampo(e.target.name, e.target.value)} className="form-control" id="nome" name="nome" />

@@ -209,6 +209,32 @@ namespace BackEnd_MusicPlayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("PlayList.Models.Administrador", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Administradores");
+                });
+
+            modelBuilder.Entity("PlayList.Models.Comum", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Comuns");
+                });
+
             modelBuilder.Entity("PlayList.Models.Musica", b =>
                 {
                     b.Property<string>("Id")
@@ -221,6 +247,9 @@ namespace BackEnd_MusicPlayer.Migrations
                     b.Property<string>("CaminhoImagem")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ComumId")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -228,10 +257,9 @@ namespace BackEnd_MusicPlayer.Migrations
                     b.Property<string>("PlaylistId")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("UsuarioId")
-                        .HasColumnType("TEXT");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("ComumId");
 
                     b.HasIndex("PlaylistId");
 
@@ -246,6 +274,9 @@ namespace BackEnd_MusicPlayer.Migrations
                     b.Property<string>("CaminhoImagem")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ComumId")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Descricao")
                         .HasColumnType("TEXT");
 
@@ -253,10 +284,9 @@ namespace BackEnd_MusicPlayer.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("UsuarioId")
-                        .HasColumnType("TEXT");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("ComumId");
 
                     b.ToTable("Playlists");
                 });
@@ -332,9 +362,27 @@ namespace BackEnd_MusicPlayer.Migrations
 
             modelBuilder.Entity("PlayList.Models.Musica", b =>
                 {
+                    b.HasOne("PlayList.Models.Comum", null)
+                        .WithMany("Musicas")
+                        .HasForeignKey("ComumId");
+
                     b.HasOne("PlayList.Models.Playlist", null)
                         .WithMany("Musicas")
                         .HasForeignKey("PlaylistId");
+                });
+
+            modelBuilder.Entity("PlayList.Models.Playlist", b =>
+                {
+                    b.HasOne("PlayList.Models.Comum", null)
+                        .WithMany("Playlists")
+                        .HasForeignKey("ComumId");
+                });
+
+            modelBuilder.Entity("PlayList.Models.Comum", b =>
+                {
+                    b.Navigation("Musicas");
+
+                    b.Navigation("Playlists");
                 });
 
             modelBuilder.Entity("PlayList.Models.Playlist", b =>

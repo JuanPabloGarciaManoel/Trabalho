@@ -11,20 +11,26 @@ import Player from "./components/Player";
 const Rotas = () => {
     return (<BrowserRouter>
     <Routes>
+      
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path='login' element={<Login />}></Route>
-        <Route path='registrar' element={<Registrar />}>
-          <Route path=':acao' element={<Registrar />} />
-        </Route>
-        <Route path='comum' element={<Comum />}>
-          <Route path=':acao' element={<Comum />} />
-          <Route path=':acao/:id' element={<Comum />} />
-        </Route>
-        <Route path='administrador' element={<Administrador />}>
-          <Route path=':acao' element={<Administrador />} />
-          <Route path=':acao/:id' element={<Administrador />} />
-        </Route>
+        <Route path='login' element={<Login />}/>
+      
+      <Route path='registrar' element={<Registrar />}>
+        <Route path=':acao' element={<Registrar />} />
+      </Route>
+      
+      <Route path='comum' element={<Comum />}>
+        <Route path=':acao' element={<Comum />} />
+        <Route path=':acao/:id' element={<Comum />} />
+        <Route path='player' element={<Player/>} />
+      </Route>
+
+      <Route path='administrador' element={<Administrador />}>
+        <Route path=':acao' element={<Administrador />} />
+        <Route path=':acao/:id' element={<Administrador />} />
+      </Route>
+
       </Route>
     </Routes>
   </BrowserRouter>);
