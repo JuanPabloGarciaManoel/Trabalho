@@ -6,8 +6,6 @@ import Rotas from './Rotas';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-/*root.render(<Player />);*/
-
 root.render(
     <React.StrictMode>
       <Rotas />
