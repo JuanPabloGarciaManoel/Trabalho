@@ -3,12 +3,12 @@
   src: url(../font/Cream\ Cake.otf);
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   background-color: rgba(209, 41, 41, 0.301);
   background-image: url(../img/pexels-lopsan-2191013.jpg);
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
   font-family: CreamCake;
   font-size: 1.5vw;
@@ -29,14 +29,15 @@ body{
 }
 
 #usuario-flexbox:hover,
-#segunda-seccao:hover{
+#segunda-seccao:hover {
   filter: blur(1px);
 }
 
 .item-menu {
   margin-left: 50px;
 }
-.item-menu:hover{
+
+.item-menu:hover {
   text-decoration: underline;
   filter: blur(1px);
 }
@@ -44,8 +45,6 @@ body{
 #primeira-seccao {
   display: flex;
   align-items: center;
-  cursor: pointer;
-  
 }
 
 #segunda-seccao {
@@ -94,12 +93,12 @@ body{
 }
 
 
-.titulo{
+.titulo {
   padding: 2vw;
   margin: 0;
 }
 
-.artista{
+.artista {
   padding: 1vw;
   margin: 0;
 }
@@ -107,12 +106,12 @@ body{
 .botao {
   background: none;
   border: none;
-  display: inline-block; 
+  display: inline-block;
   padding: 1vw;
   margin: 1vw;
 }
 
-.tempo{
+.tempo {
   margin: 0 auto;
   width: 80%;
   display: flex;
@@ -136,6 +135,7 @@ body{
   #componente {
     font-size: 4vw;
   }
+
   .capaMusica {
     max-width: 80vw;
   }

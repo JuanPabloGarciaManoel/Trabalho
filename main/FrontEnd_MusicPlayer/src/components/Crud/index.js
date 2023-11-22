@@ -3,6 +3,7 @@ import CrudAcao from "./CrudAcao";
 import CrudLista from "./CrudLista";
 import CrudManutencao from "./CrudManutencao";
 import { Link } from "react-router-dom";
+import "../form.css"
 
 const Crud = (props) => {
     let acao = props.acao;

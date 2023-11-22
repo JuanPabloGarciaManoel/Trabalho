@@ -33,12 +33,12 @@ public class PlaylistController(ApplicationDbContext db) : ControllerBase
     [HttpGet("mestre/{id}")]
     public ActionResult<IEnumerable<Playlist>> GetIdMestre(string id)
     {
-        var objetos = db.Playlists.Where(x => x.Id == id);
+        var obj = db.Playlists.Where(x => x.IdUsuario == id);
 
-        if (objetos == null)
+        if (obj == null)
             return NotFound();
 
-        return objetos.ToArray();
+        return obj.ToArray();
     }
 
     [HttpPost]

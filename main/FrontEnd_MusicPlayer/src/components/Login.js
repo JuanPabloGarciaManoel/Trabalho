@@ -1,19 +1,20 @@
-import React, {useState} from 'react';
-import {useQuery} from '../useQuery';
-import { useNavigate, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useQuery } from '../useQuery';
+import { useNavigate} from 'react-router-dom';
 import { login } from '../auth';
+import "../components/form.css"
 
 const Login = () => {
     const query = useQuery();
     const navigate = useNavigate();
-    const [objeto, setObjeto] = useState({email: '', senha: ''});
+    const [objeto, setObjeto] = useState({ email: '', senha: '' });
 
     let redirecionarPara = query.get('redirect');
 
     if (!redirecionarPara) {
         redirecionarPara = '/';
     }
-    
+
     const sucesso = (result) => {
         navegar();
     }
@@ -30,7 +31,7 @@ const Login = () => {
     const navegar = () => {
         let url = query.get('redirect');
 
-        console.log("'"+url+"'");
+        console.log("'" + url + "'");
 
         if (!url) {
             url = '/';
@@ -40,29 +41,26 @@ const Login = () => {
     };
 
     const alterarCampo = (nome, valor) => {
-        let obj = {...objeto};
+        let obj = { ...objeto };
         obj[nome] = valor;
         setObjeto(obj);
     };
 
     return (
-    <div className="mx-5">
-        <h1>Login</h1>
-        {/* <button onClick={navegar}>Navegar</button> */}
-        <form>
-            <div className="form-group">
-                <label htmlFor="email">E-mail</label>
-                <input type="email" className="form-control" value={objeto.nome} onChange={(e) => alterarCampo(e.target.name, e.target.value)} id="email" name="email" aria-describedby="emailHelp" placeholder="Entre com o e-mail" />
-            </div>
-            <div className="form-group">
-                <label htmlFor="senha">Senha</label>
-                <input type="password" className="form-control" value={objeto.senha} onChange={(e) => alterarCampo(e.target.name, e.target.value)} id="senha" name="senha" placeholder="Digite a sua senha" />
-            </div>
-            <button type="submit" className="btn btn-primary mt-2" onClick={logar}>Entrar</button>
-            <span> </span>
-            <Link className="btn btn-secondary mt-2" to={'/registrar?redirect=' + redirecionarPara}>Criar Novo Usuário</Link>
-        </form>
-    </div>);
+        <div id="form-container">
+            <h1>Login</h1>
+            <form id='formID'>
+                <div className="campo-form">
+                    <label htmlFor="email">E-mail: </label>
+                    <input type="email" className="form-control" value={objeto.nome} onChange={(e) => alterarCampo(e.target.name, e.target.value)} id="email" name="email" aria-describedby="emailHelp"/>
+                </div>
+                <div className="campo-form">
+                    <label htmlFor="senha">Senha: </label>
+                    <input type="password" className="form-control" value={objeto.senha} onChange={(e) => alterarCampo(e.target.name, e.target.value)} id="senha" name="senha"/>
+                </div>
+                <button type="submit" id="btn-form" onClick={logar}>Entrar</button>
+            </form>
+        </div>);
 };
 
 export default Login;

@@ -4,14 +4,13 @@ import useSound from "use-sound";
 import { IconContext } from "react-icons";
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai"
-import { MdExitToApp } from "react-icons/md";
-import { IoPersonCircle } from "react-icons/io5";
 
 
 import musica from "../musicas/musica.mp3";
 import capa from "../img/capa_legiao.jpg";
 
 import "../components/Player.css"
+import CabecalhoLogado from './CabecalhoLogado';
 
 const Player = () => {
 
@@ -68,25 +67,6 @@ const Player = () => {
 
     return (
         <>
-        <nav id="navegacao">
-                <div id="primeira-seccao">
-                    <div id="usuario-flexbox">
-                        <IconContext.Provider value={{ size: "3em", color: "black" }}>
-                            <IoPersonCircle />
-                        </IconContext.Provider>Olá Zezin!
-                    </div>
-                    <p className="item-menu">Músicas</p>
-                    <p className="item-menu">Playlist</p>
-                </div>
-                <div id="segunda-seccao">
-                    <button id="botaoSair">
-                        <IconContext.Provider value={{ size: "3em", color: "black" }}>
-                            <MdExitToApp />
-                        </IconContext.Provider>
-                    </button>
-                    <p id="sair">Sair</p>
-                </div>
-            </nav>
         <div id="componente">
             <div id="cabecalho">
                 <h2 className="titulo">Teatro dos Vampiros</h2>

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Musica from "./components/Musica";
-import Playlist from "./components/Playlist";
+import Musica from "./components/Musica/Musica";
+import Playlist from "./components/Playlist/Playlist";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Login from './components/Login';
@@ -9,39 +9,12 @@ import Registrar from "./components/Registrar";
 import Player from "./components/Player";
 
 const Rotas = () => {
-<<<<<<< Updated upstream
-    return (<BrowserRouter>
-    <Routes>
-      
-      <Route path='/' element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path='login' element={<Login />}/>
-      
-      <Route path='registrar' element={<Registrar />}>
-        <Route path=':acao' element={<Registrar />} />
-      </Route>
-      
-      <Route path='comum' element={<Comum />}>
-        <Route path=':acao' element={<Comum />} />
-        <Route path=':acao/:id' element={<Comum />} />
-        <Route path='player' element={<Player/>} />
-      </Route>
-
-      <Route path='administrador' element={<Administrador />}>
-        <Route path=':acao' element={<Administrador />} />
-        <Route path=':acao/:id' element={<Administrador />} />
-      </Route>
-
-      </Route>
-    </Routes>
-  </BrowserRouter>);
-=======
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='login' element={<Login />}></Route>
+          <Route path='login' element={<Login />} />
           <Route path='registrar' element={<Registrar />}>
             <Route path=':acao' element={<Registrar />} />
           </Route>
@@ -58,7 +31,6 @@ const Rotas = () => {
       </Routes>
     </BrowserRouter>
   );
->>>>>>> Stashed changes
 };
 
 export default Rotas;

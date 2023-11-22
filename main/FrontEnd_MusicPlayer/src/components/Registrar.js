@@ -1,14 +1,15 @@
-import React, {useState} from 'react';
-import {useQuery} from '../useQuery';
+import React, { useState } from 'react';
+import { useQuery } from '../useQuery';
 import { useNavigate, useParams } from 'react-router-dom';
 import { registrarUsuario } from '../auth';
+import "../components/form.css"
 
 const Registrar = () => {
-    const {acao} = useParams();
+    const { acao } = useParams();
     const query = useQuery();
     const navigate = useNavigate();
-    const [objeto, setObjeto] = useState({email: '', senha: ''});
-    
+    const [objeto, setObjeto] = useState({ email: '', senha: '' });
+
     const sucesso = (result) => {
         navegar();
     }
@@ -38,27 +39,27 @@ const Registrar = () => {
     };
 
     const alterarCampo = (nome, valor) => {
-        let obj = {...objeto};
+        let obj = { ...objeto };
         obj[nome] = valor;
         setObjeto(obj);
     };
 
     return (
-        <div className="mx-5">
-            <h1>Criar novo usuário</h1>
-            {/* <button onClick={() => navigate(query.get('redirect'))}>Navegar</button> */}
-            <form>
-                <div className="form-group">
-                    <label htmlFor="email">E-mail</label>
-                    <input type="email" className="form-control" value={objeto.nome} onChange={(e) => alterarCampo(e.target.name, e.target.value)} id="email" name="email" aria-describedby="emailHelp" placeholder="Entre com o e-mail" />
+        <div id="form-container">
+            <h1>Criar nova conta</h1>
+            <form id="formID">
+                <div class="campo-form">
+                    <label for="email">E-mail: </label>
+                    <input type="email" value={objeto.nome} onChange={(e) => alterarCampo(e.target.name, e.target.value)} name="email" id="email" aria-describedby="emailHelp" />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="senha">Senha</label>
-                    <input type="password" className="form-control" value={objeto.senha} onChange={(e) => alterarCampo(e.target.name, e.target.value)} id="senha" name="senha" placeholder="Digite a sua senha" />
+                <div class="campo-form">
+                    <label for="senha">Senha: </label>
+                    <input type="password" value={objeto.senha} onChange={(e) => alterarCampo(e.target.name, e.target.value)} name="senha" id="senha" />
                 </div>
-                <button type="submit" className="btn btn-primary mt-2" onClick={criarUsuario}>Criar</button>
+                <button type="submit" id="btn-form" onClick={criarUsuario}>Criar</button>
             </form>
         </div>
+
     );
 };
 

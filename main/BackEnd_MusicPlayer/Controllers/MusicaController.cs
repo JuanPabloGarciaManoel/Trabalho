@@ -1,9 +1,13 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PlayList.Models;
 using PlayListAPI.Models;
 
 namespace PlayList.Controllers;
 
+[Authorize]
+[ApiController]
+[Route("api/[controller]")]
 public class MusicaController(ApplicationDbContext db) : ControllerBase
 {
 
@@ -25,6 +29,17 @@ public class MusicaController(ApplicationDbContext db) : ControllerBase
             return NotFound();
 
         return obj;
+    }
+
+    [HttpGet("mestre/{id}")]
+    public ActionResult<IEnumerable<Musica>> GetIdMestre(string id)
+    {
+        var obj = db.Musicas?.Where(x => x.IdUsuario == id);
+
+        if (obj == null)
+            return NotFound();
+
+        return obj.ToArray();
     }
 
     [HttpPost]

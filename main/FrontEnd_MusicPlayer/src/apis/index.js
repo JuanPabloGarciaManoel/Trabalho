@@ -5,7 +5,7 @@ import {estaAutenticado, getToken} from '../auth';
 const urlBase = 'http://localhost:5271/api'
 const cookies = new Cookies();
 
-const checarAutenticacao = (navigate, locationUrl) => {
+export const checarAutenticacao = (navigate, locationUrl) => {
     if(!estaAutenticado()) {
         navigate('/login?redirect=' + locationUrl);
     }
@@ -37,6 +37,23 @@ export const apiAuthGetPorId = (url, id, sucesso, erro, navigate, locationUrl) =
     });
 
     instance.get(`/${url}/${id}`).then(result => {
+        sucesso(result.data);
+    }).catch(error => {
+        console.log(erro);
+        erro(error);
+    });
+};
+
+export const apiAuthGetPorIdMestre = (url, id, sucesso, erro, navigate, locationUrl) => { 
+    checarAutenticacao(navigate, locationUrl);
+
+    const instance = axios.create({
+        baseURL: `${urlBase}`,
+        timeout: 1000,
+        headers: {'Authorization': 'Bearer ' + getToken()}
+    });
+
+    instance.get(`/${url}/mestre/${id}`).then(result => {
         sucesso(result.data);
     }).catch(error => {
         console.log(erro);
@@ -102,6 +119,14 @@ export const apiGet = (url, sucesso, erro) => {
 
 export const apiGetPorId = (url, id, sucesso, erro) => { 
     axios.get(`${urlBase}/${url}/${id}`).then(result => {
+        sucesso(result.data);
+    }).catch(error => {
+        erro(error);
+    });
+};
+
+export const apiGetPorIdMestre = (url, id, sucesso, erro) => { 
+    axios.get(`${urlBase}/${url}/mestre/${id}`).then(result => {
         sucesso(result.data);
     }).catch(error => {
         erro(error);

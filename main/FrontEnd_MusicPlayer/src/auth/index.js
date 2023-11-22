@@ -1,5 +1,5 @@
 import Cookies from 'universal-cookie';
-import {jwtDecode} from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 import { apiPost } from '../apis';
 
 const cookies = new Cookies();
@@ -39,7 +39,7 @@ export const usuarioPossuiPermissao = (permissao) => {
 
 export const registrarUsuario = (usuario, senha, admin, sucesso, erro) => {
     
-    apiPost('usuario/criar' + (admin ? 'admin' : ''), {Email: usuario, Password: senha}, (result) => {
+    apiPost('Usuario/Criar' + (admin ? 'Admin' : ''), {Email: usuario, Password: senha}, (result) => {
         const token = result;
         const decoded = jwtDecode(token);
 
@@ -57,7 +57,7 @@ export const registrarUsuario = (usuario, senha, admin, sucesso, erro) => {
 };
 
 export const login = (usuario, senha, sucesso, erro) => {
-    apiPost('usuario/login', {Email: usuario, Password: senha}, (result) => {
+    apiPost('Usuario/Login', {Email: usuario, Password: senha}, (result) => {
         
         const token = result;
         const decoded = jwtDecode(token);
