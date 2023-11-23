@@ -45,14 +45,16 @@ public class MusicaController(ApplicationDbContext db) : ControllerBase
     [HttpPost]
     public ActionResult<Musica> Post(Musica obj)
     {
-        if (obj.Id == null)
+        if (string.IsNullOrWhiteSpace(obj.Id))
             obj.Id = Guid.NewGuid().ToString();
 
         db.Musicas.Add(obj);
+        db.SaveChanges();
 
         return CreatedAtAction(
             nameof(GetId),
-            new { id = obj.Id },
+            new { id = obj.Id ,
+            },
             obj
         );
     }
