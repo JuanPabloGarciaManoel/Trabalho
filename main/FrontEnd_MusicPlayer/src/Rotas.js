@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Login from './components/Login';
 import Registrar from "./components/Registrar";
 import Player from "./components/Player";
+import PlaylistCadastroMusicas from "./components/Playlist/PlaylistCadastroMusicas";
 
 const Rotas = () => {
   return (
@@ -25,6 +26,7 @@ const Rotas = () => {
           <Route path='playlist' element={<Playlist />}>
             <Route path=':acao' element={<Playlist />} />
             <Route path=':acao/:id' element={<Playlist />} />
+            <Route path=":playlistaddmusica/:id" element={<PlaylistCadastroMusicas />} />
           </Route>
           <Route path="player" element={<Player />} />
         </Route>

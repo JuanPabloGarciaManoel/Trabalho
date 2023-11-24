@@ -7,7 +7,6 @@ import "./index.css"
 import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
 import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
-import options from "../img/options.png"
 
 const CrudLista = (props) => {
     const [objetos, setObjetos] = useState([]);
@@ -49,19 +48,25 @@ const CrudLista = (props) => {
                                 <td key={prop}>{obj[prop]}</td>
                             ))}
                             <Menu className="options" menuButton={<MenuButton>Opções</MenuButton>} transition>
-                                <MenuItem><Link to={`/${props.entidade}/${CrudAcao.consultar}/${obj.id}`}>
-                                    Consultar
-                                </Link>
+                                <MenuItem>
+                                    <Link to={`/player`}>
+                                        Reproduzir
+                                    </Link>
                                 </MenuItem>
                                 <MenuItem>
-                                <Link to={`/${props.entidade}/${CrudAcao.alterar}/${obj.id}`}>
-                                    Alterar
-                                </Link>
+                                    <Link to={`/${props.entidade}/${CrudAcao.consultar}/${obj.id}`}>
+                                        Consultar
+                                    </Link>
                                 </MenuItem>
                                 <MenuItem>
-                                <Link to={`/${props.entidade}/${CrudAcao.excluir}/${obj.id}`}>
-                                    Excluir
-                                </Link>
+                                    <Link to={`/${props.entidade}/${CrudAcao.alterar}/${obj.id}`}>
+                                        Alterar
+                                    </Link>
+                                </MenuItem>
+                                <MenuItem>
+                                    <Link to={`/${props.entidade}/${CrudAcao.excluir}/${obj.id}`}>
+                                        Excluir
+                                    </Link>
                                 </MenuItem>
                             </Menu>
                         </tr>
