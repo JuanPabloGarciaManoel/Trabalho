@@ -2,12 +2,32 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Crud from "../Crud";
 import "../form.css";
-import { salvarArquivoImagem, salvarArquivoMP3 } from "../../upload";
+import axios from "axios";
 
 const Musica = () => {
   const { id, acao } = useParams();
-  const [arquivoMusica, setArquivoMusica] = useState(null);
-  const [arquivoImagem, setArquivoImagem] = useState(null);
+  const [file, setFile] = useState(null);
+  const [uploadedFile, setUploadedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+  };
+
+  const handleImagemChange = (event) => {
+    setFile(event.target.files[0]);
+  };
+
+  const handleUpload = async () => {
+    const formData = new FormData();
+    formData.append('_IFormFile', file);
+
+    try {
+      const response = await axios.post('http://localhost:5271/api/FileManager/Upload', formData);
+      setUploadedFile(response.data);
+    } catch (error) {
+      console.error('Erro ao fazer upload do arquivo:', error);
+    }
+  };
 
   const configCampos = {
     titulos: ["Nome", "Capa"],
@@ -19,30 +39,8 @@ const Musica = () => {
   };
 
   const campos = (somenteLeitura, obj, alterarCampo) => {
-    const handleFileChange = (event, tipoArquivo) => {
-      const arquivo = event.target.files[0];
-      tipoArquivo === "musica" ? setArquivoMusica(arquivo) : setArquivoImagem(arquivo);
-    };
 
-    const handleUpload = async () => {
-      try {
-        if (arquivoMusica) {
-          // Faça o upload do arquivo MP3
-          const resultMusica = await salvarArquivoMP3(arquivoMusica);
-          // Atualize o caminho no objeto da música
-          alterarCampo("caminhoDB", resultMusica.url);
-        }
 
-        if (arquivoImagem) {
-          // Faça o upload do arquivo de imagem
-          const resultImagem = await salvarArquivoImagem(arquivoImagem);
-          // Atualize o caminho no objeto da música
-          alterarCampo("caminhoImagem", resultImagem.url);
-        }
-      } catch (error) {
-        console.error("Erro ao enviar arquivo:", error);
-      }
-    };
 
     return (
       <div id="form-container">
@@ -54,13 +52,14 @@ const Musica = () => {
           </div>
           <div className="campo-form">
             <label htmlFor="musica">Musica: </label>
-            <input type="file" name="musica" onChange={(e) => handleFileChange(e, "musica")} />
+            <input type="file" onChange={handleFileChange} />
           </div>
           <div className="campo-form">
             <label htmlFor="imagem">Imagem: </label>
-            <input type="file" name="imagem" onChange={(e) => handleFileChange(e, "imagem")} />
+            <input type="file" onChange={handleImagemChange} />
           </div>
-          <button type="button" onClick={handleUpload}>Enviar Arquivos</button>
+          <button onClick={handleUpload}>Upload</button>
+          {uploadedFile && <p>File uploaded: {uploadedFile}</p>}
         </form>
       </div>
     );
