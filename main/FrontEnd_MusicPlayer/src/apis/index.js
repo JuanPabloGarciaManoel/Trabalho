@@ -1,9 +1,7 @@
 import axios from "axios";
-import Cookies from 'universal-cookie';
 import {estaAutenticado, getToken} from '../auth';
 
 const urlBase = 'http://localhost:5271/api'
-const cookies = new Cookies();
 
 export const checarAutenticacao = (navigate, locationUrl) => {
     if(!estaAutenticado()) {
@@ -106,6 +104,28 @@ export const apiAuthDelete = (url, id, sucesso, erro) => {
         sucesso();
     }).catch(error => {
         erro(error);
+    });
+};
+
+export const apiAuthFileUpload = (url, arquivo, sucesso, erro) => {
+    checarAutenticacao();
+
+    const formData = new FormData();
+    formData.append('_IFormFile', arquivo);
+
+    const instance = axios.create({
+        baseURL: `${urlBase}`,
+        timeout: 10000,
+        headers: {
+            'Authorization': 'Bearer ' + getToken(),
+            'Content-Type': 'multipart/form-data'
+        }
+    });
+
+    instance.post(`/${url}`, formData).then(result => {
+        sucesso(result.data);
+    }).catch(error => {
+        console.log(error);
     });
 };
 

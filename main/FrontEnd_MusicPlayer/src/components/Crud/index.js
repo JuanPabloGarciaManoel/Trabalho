@@ -3,7 +3,7 @@ import CrudAcao from "./CrudAcao";
 import CrudLista from "./CrudLista";
 import CrudManutencao from "./CrudManutencao";
 import { Link } from "react-router-dom";
-import "../form.css"
+import "./index.css"
 
 const Crud = (props) => {
     let acao = props.acao;
@@ -14,9 +14,9 @@ const Crud = (props) => {
 
     if (acao === CrudAcao.listar) {
         return (
-            <div>
+            <div className="container">
                 <h1>Cadastro de {props.entidadeNomeAmigavelPlural}</h1>
-                <Link className="btn btn-primary" to={`/${props.entidade}/${CrudAcao.inserir}`}>Inserir</Link>
+                <Link className="btn" to={`/${props.entidade}/${CrudAcao.inserir}`}>Inserir</Link>
                 <CrudLista 
                     entidade={props.entidade}
                     configCampos={props.configCampos}

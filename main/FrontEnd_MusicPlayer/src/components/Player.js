@@ -10,7 +10,6 @@ import musica from "../musicas/musica.mp3";
 import capa from "../img/capa_legiao.jpg";
 
 import "../components/Player.css"
-import CabecalhoLogado from './CabecalhoLogado';
 
 const Player = () => {
 

@@ -3495,19 +3495,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\juanp\\.nuget\\packages\\": {}
+    "C:\\Users\\arthu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juanp\\Desktop\\CAMILO\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj",
+      "projectUniqueName": "E:\\Vianna\\4_Semestre\\PFS\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj",
       "projectName": "BackEnd_MusicPlayer",
-      "projectPath": "C:\\Users\\juanp\\Desktop\\CAMILO\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj",
-      "packagesPath": "C:\\Users\\juanp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juanp\\Desktop\\CAMILO\\Trabalho\\main\\BackEnd_MusicPlayer\\obj\\",
+      "projectPath": "E:\\Vianna\\4_Semestre\\PFS\\Trabalho\\main\\BackEnd_MusicPlayer\\BackEnd_MusicPlayer.csproj",
+      "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+      "outputPath": "E:\\Vianna\\4_Semestre\\PFS\\Trabalho\\main\\BackEnd_MusicPlayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\juanp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

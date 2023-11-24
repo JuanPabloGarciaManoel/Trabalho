@@ -1,0 +1,33 @@
+.container {
+    display: grid;
+    grid-template-rows: 3fr 1fr 3fr;
+    justify-content: center;
+    background-color: white;
+    margin: 1vw;
+}
+
+.btn {
+    color: white;
+    background-color: black;
+    width: 3vw;
+    border-radius: 10%;
+}
+
+.btn:hover {
+    color: black;
+    background-color: gray;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.options-img {
+    width: 10px;
+}
